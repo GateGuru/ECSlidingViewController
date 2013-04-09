@@ -266,8 +266,8 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
                                              self.anchorLeftTopViewCenter != NSNotFound &&
                                              newCenterPosition < self.anchorLeftTopViewCenter) ||
                                             (self.underLeftViewController &&
-                                             self.anchorLeftTopViewCenter != NSNotFound &&
-                                             self.anchorRightTopViewCenter < newCenterPosition);
+                                             self.anchorRightTopViewCenter != NSNotFound &&
+                                             newCenterPosition > self.anchorRightTopViewCenter);
     
     if ((newCenterPositionIsOutsideAnchor && self.shouldAllowPanningPastAnchor) || !newCenterPositionIsOutsideAnchor) {
       [self topViewHorizontalCenterWillChange:newCenterPosition];
